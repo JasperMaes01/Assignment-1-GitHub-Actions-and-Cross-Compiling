@@ -25,5 +25,11 @@ jobs:
       - name: Upload pynq artifact
         uses: actions/upload-artifact@v2
         with:
-          name: out-exe-artifact
+          name: Pynq-artifact
           path: out.exe
+          
+      - name: Upload C artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: C-ubuntu-artifact
+          path: main.exe
