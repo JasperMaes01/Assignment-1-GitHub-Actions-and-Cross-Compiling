@@ -13,6 +13,9 @@ jobs:
       - name: Cross-compiler install
         run: sudo apt install --yes {gcc,binutils}-arm-linux-gnueabihf
 
+      - name: Output file
+        run: sudo file out.exe
+
       - name: Compiling for pynq
         run: arm-linux-gnueabihf-gcc -o out.exe main.c
 
