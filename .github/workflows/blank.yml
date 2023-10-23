@@ -21,3 +21,9 @@ jobs:
 
       - name: Compile C program
         run: gcc main.c -o main.exe
+        
+      - name: Upload pynq artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: out-exe-artifact
+          path: out.exe
