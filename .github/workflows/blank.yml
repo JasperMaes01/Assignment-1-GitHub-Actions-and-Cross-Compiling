@@ -9,4 +9,4 @@ jobs:
 
     steps:
       - name: Compile C program
-        run: gcc -o main.exe main.c
+        run: gcc main.c -o main.exe
