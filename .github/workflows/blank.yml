@@ -9,6 +9,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2  # This step checks out your repository code
-      
+
+      - name: Cross-compiler install
+        run: apt install --yes {gcc,binutils}-arm-linux-gnueabihf
+
+      - name: Compiling for pynq
+        run: arm-linux-gnueabihf-gcc -o out.exe main.c
+
       - name: Compile C program
         run: gcc main.c -o main.exe
